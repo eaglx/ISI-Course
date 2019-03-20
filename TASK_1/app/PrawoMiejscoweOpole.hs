@@ -16,7 +16,6 @@ import Text.Printf
 --                 >>> first (arr ((++"tr") . init))
 --                 >>> first (extractLinksWithText "//li/a[contains(@href,'.pdf')]")
 
---extractInnerHtml xpathCondition
 
 extractRecords = extractLinksWithText "//div[@class='rocznik']/div/p/a[@href='/institution/18386/yearbook/2019/January']"
                 >>> second (arr $ replace "                                 " "")
