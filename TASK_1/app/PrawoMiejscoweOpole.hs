@@ -50,7 +50,7 @@ myver_baseMonthNameToNumber "jesien"    =  "10"
 myver_baseMonthNameToNumber _             = ""
 
 
-extractRecords = extractLinksWithText "//div[@class='rocznik']/div/p/a"
+extractRecords = extractLinksWithText "//div[@class='rocznik']/div[contains(@class, 'rocznik_1')]/p/a"
                 >>> second (arr $ replace "                                 " "")
                 >>> first (extractLinksWithText "//div[@class='uchwala-area']/div/p/a")
                 >>> first(second (arr $ replace "                                 " ""))
